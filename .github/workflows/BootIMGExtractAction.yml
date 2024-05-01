@@ -30,7 +30,7 @@ jobs:
           cd ~
           git clone --recurse-submodules https://github.com/tosasitill/Firmware_extractor.git
           cd Firmware_extractor
-          aria2c -s 10 -x 10 -d . -o firmware.zip "${inputs.rom_url}"
+          aria2c -s 10 -x 10 -d . -o firmware.zip ${inputs.rom_url}
           ./extractor.sh firmware.zip
           if [ -f "init_boot.img" ]; then
             mkdir -p out
