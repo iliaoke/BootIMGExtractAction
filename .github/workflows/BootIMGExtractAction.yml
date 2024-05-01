@@ -7,14 +7,15 @@ on:
       rom_url:
         description: 'ROM 下载直链'
         required: true
-        default: 'https://bkt-sgp-miui-ota-update-alisgp.oss-ap-southeast-1.aliyuncs.com/V14.0.8.0.TKHCNXM/miui_ALIOTH_V14.0.8.0.TKHCNXM_50141f32f2_13.0.zip'
+        default: 'https://cdnorg.d.miui.com/OS1.0.5.0.ULTCNXM/miui_MAYFLY_OS1.0.5.0.ULTCNXM_e6a95688ff_14.0.zip'
 
 jobs:
   YIJIANTIQU:
     runs-on: ubuntu-latest
     steps:
-      - name: 检出代码
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v4.1.4
+            
 
       - name: 安装依赖
         run: |
