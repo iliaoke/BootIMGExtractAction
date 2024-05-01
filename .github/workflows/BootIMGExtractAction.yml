@@ -3,11 +3,6 @@ name: 提取 boot / init_boot.img
 on:
   push:
   workflow_dispatch:
-    inputs:
-      rom_url:
-        description: 'ROM 下载直链'
-        required: true
-        default: 'https://cdnorg.d.miui.com/OS1.0.5.0.ULTCNXM/miui_MAYFLY_OS1.0.5.0.ULTCNXM_e6a95688ff_14.0.zip'
 
 jobs:
   YIJIANTIQU:
@@ -30,7 +25,7 @@ jobs:
           cd ~
           git clone --recurse-submodules https://github.com/tosasitill/Firmware_extractor.git
           cd Firmware_extractor
-          aria2c -s 10 -x 10 -d . -o firmware.zip ${inputs.rom_url}
+          aria2c -s 10 -x 10 -d . -o firmware.zip https://cdnorg.d.miui.com/OS1.0.5.0.ULTCNXM/miui_MAYFLY_OS1.0.5.0.ULTCNXM_e6a95688ff_14.0.zip
           ./extractor.sh firmware.zip
           if [ -f "init_boot.img" ]; then
             mkdir -p out
