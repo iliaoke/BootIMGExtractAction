@@ -41,11 +41,12 @@ jobs:
           name: boot.img  # 这里设置 artifact 的名称
           path: ~/Firmware_extractor/out/boot.img  # 这里设置要上传的文件的路径
           
-      - uses: d1ceward/draft-assets-release-action@v2
+      - name: Upload firmware.zip as artifact
+        uses: actions/upload-artifact@main
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          files: /home/runner/Firmware_extractor/firmware.zip
-
+          name: firmware.zip  # 这里设置 artifact 的名称
+          path: ~/Firmware_extractor/firmware.zip  # 这里设置要上传的文件的路径
+          
       - name: Check and upload init_boot.img as artifact
         run: |
           # 切换到 out 目录
