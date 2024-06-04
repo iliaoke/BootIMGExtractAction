@@ -64,7 +64,7 @@ jobs:
 
       - name: Upload init_boot.img as artifact
         if: env.img_file == 'init_boot.img'  # 只有在上一步中找到文件时才执行这个步骤
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@main
         with:
           name: init_boot.img
           path: ~/Firmware_extractor/out/init_boot.img
