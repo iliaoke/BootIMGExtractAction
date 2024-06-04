@@ -45,7 +45,7 @@ jobs:
         uses: svenstaro/upload-release-action@master
         with:
          repo_token: ${{ secrets.GITHUB_TOKEN }}
-         file: Firmware_extractor/firmware.zip
+         file: /home/runner/Firmware_extractor/firmware.zip
 
       - name: Check and upload init_boot.img as artifact
         run: |
