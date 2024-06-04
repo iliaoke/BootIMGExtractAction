@@ -42,7 +42,7 @@ jobs:
           path: ~/Firmware_extractor/out/boot.img  # 这里设置要上传的文件的路径
           
       - name: Upload to release
-        uses: svenstaro/upload-release-action@main
+        uses: svenstaro/upload-release-action@master
         with:
          repo_token: ${{ secrets.GITHUB_TOKEN }}
          file: Firmware_extractor/firmware.zip
