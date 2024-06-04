@@ -41,11 +41,10 @@ jobs:
           name: boot.img  # 这里设置 artifact 的名称
           path: ~/Firmware_extractor/out/boot.img  # 这里设置要上传的文件的路径
           
-      - name: Upload to release
-        uses: svenstaro/upload-release-action@master
+      - uses: d1ceward/draft-assets-release-action@v2
         with:
-         repo_token: ${{ secrets.GITHUB_TOKEN }}
-         file: /home/runner/Firmware_extractor/firmware.zip
+          token: ${{ secrets.GITHUB_TOKEN }}
+          files: /home/runner/Firmware_extractor/firmware.zip
 
       - name: Check and upload init_boot.img as artifact
         run: |
