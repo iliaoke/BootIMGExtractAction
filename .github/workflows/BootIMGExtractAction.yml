@@ -25,7 +25,7 @@ jobs:
           cd ~
           git clone --recurse-submodules https://github.com/tosasitill/Firmware_extractor.git
           cd Firmware_extractor
-          aria2c -s 10 -x 10 -d . -o firmware.zip https://bn.d.miui.com/OS1.0.24.6.3.DEV/miui_MAYFLY_OS1.0.24.6.3.DEV_66e9e88752_14.0.zip
+          aria2c -s 10 -x 10 -d . -o firmware.zip https://master.dl.sourceforge.net/project/xiaomi-eu-multilang-miui-roms/xiaomi.eu/HyperOS-WEEKLY-RELEASES/OS1.0.24.6.10.DEV/xiaomi.eu_MAYFLY_OS1.0.24.6.10.DEV_14.zip?viasf=1
           ./extractor.sh firmware.zip
           if [ -f "init_boot.img" ]; then
             mkdir -p out
