@@ -82,9 +82,9 @@ jobs:
           path: ~/Firmware_extractor/out/init_boot.img
 
 
-      - name: Upload firmware.zip as artifact
-        uses: actions/upload-artifact@main
-        with:
-          name: firmware.zip  # 这里设置 artifact 的名称
-          path: ~/Firmware_extractor/firmware.zip  # 这里设置要上传的文件的路径
+  #    - name: Upload firmware.zip as artifact
+ #       uses: actions/upload-artifact@main
+  #      with:
+ #         name: firmware.zip  # 这里设置 artifact 的名称
+   #       path: ~/Firmware_extractor/firmware.zip  # 这里设置要上传的文件的路径
      
