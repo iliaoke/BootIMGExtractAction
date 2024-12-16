@@ -6,7 +6,7 @@ on:
 
 jobs:
   YIJIANTIQU:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@main
@@ -34,7 +34,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install tree
-          sudo apt-get -y install python3-pip aria2 libdevel brotli lz4
+          sudo apt-get -y install python3-pip aria2 liblzma-dev brotli lz4
           pip3 install backports.lzma pycrypto
           pip install protobuf==3.20
 
