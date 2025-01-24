@@ -43,7 +43,7 @@ jobs:
           cd ~
           git clone --recurse-submodules https://github.com/tosasitill/Firmware_extractor.git
           cd Firmware_extractor
-          aria2c -s 10 -x 10 -d . -o firmware.zip "https://bkt-sgp-miui-ota-update-alisgp.oss-ap-southeast-1.aliyuncs.com/OS1.0.14.0.ULTCNXM/miui_MAYFLY_OS1.0.14.0.ULTCNXM_ae11669a2c_14.0.zip"
+          aria2c -s 10 -x 10 -d . -o firmware.zip "https://bkt-sgp-miui-ota-update-alisgp.oss-ap-southeast-1.aliyuncs.com/OS2.0.1.0.VLTCNXM/mayfly-ota_full-OS2.0.1.0.VLTCNXM-user-15.0-49a4c240c4.zip"
           ./extractor.sh firmware.zip
           if [ -f "init_boot.img" ]; then
             mkdir -p out
